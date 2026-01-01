@@ -3,7 +3,7 @@ let cols = [Pal.lancerLaser, Pal.accent, Color.valueOf("cc6eaf")];
 
 function addTable(table){
 table.table(Tex.pane, t => {
-let s = new Slider(0, 3, 1, false);
+let s = new Slider(0, 5, 1, false);
 s.setValue(1);
 let l = t.label(() => {
 let v = s.getValue();
@@ -13,8 +13,12 @@ return "x0.5";
 return "x1";
 }else if(v == 2){
 return "x2";
-}else{
+}else if(v == 3){
 return "x4";
+}else if(v == 4){
+return "x8";
+}else{
+return "x16";
 }
 }).growX().width(42).color(Pal.accent);
 let b = t.button(new TextureRegionDrawable(Icon.refresh), 18, () => s.setValue(1)).padLeft(0).get();
@@ -28,6 +32,10 @@ t = 0.5;
 t = 1;
 }else if(v == 2){
 t = 2;
+}else if(v == 3){
+t = 3;
+}else if(v == 4){
+t = 4;
 }else{
 t = 4;
 }
