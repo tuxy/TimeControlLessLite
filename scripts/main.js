@@ -37,7 +37,7 @@ t = 3;
 }else if(v == 4){
 t = 4;
 }else{
-t = 4;
+t = 5;
 }
 Time.setDeltaProvider(() => Math.min(Core.graphics.getDeltaTime() * 60 * t, 3 * t));
 l.color(Tmp.c1.lerp(cols, (s.getValue() + 8) / 16));
